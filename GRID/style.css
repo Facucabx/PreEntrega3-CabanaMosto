@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+.contenedorCaja{
+    height: 1000px;
+
+    display: grid;
+    column-gap: 6px;
+    row-gap: 6px;
+
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 250px);
+
+    /* grid-template-areas:
+    "dos ocho tres"
+    "seis cuatro cinco"
+    "uno siete siete"; */
+
+
+    justify-items: start;
+    justify-items: end;
+    justify-items: stretch;
+    justify-items: center;
+    align-items: end;
+    align-items: start;
+    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    justify-content: start;
+    justify-content: end;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: start;
+    align-items: end;
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly;
+}
+
+    /* .caja:first-child{
+        grid-area: uno;
+    }*/
+    .caja:nth-child(2){
+        align-self: start;
+    }
+    .caja:nth-child(5){
+justify-self: end;
+    }
+    /*
+    .caja:nth-child(3){
+        grid-area: tres;
+    }
+    .caja:nth-child(4){
+        grid-area: cuatro;
+    }
+    .caja:nth-child(5){
+        grid-area: cinco;
+    }
+    .caja:nth-child(6){
+        grid-area: seis;
+    }
+    .caja:nth-child(7){
+        grid-area: siete;
+    }
+    .caja:nth-child(8){
+        grid-area: ocho;
+    } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.caja{
+    background-color: blue;
+    width: 150px;
+    height: 150px;
+    margin: 6px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.caja h1{
+    color: white;
+}

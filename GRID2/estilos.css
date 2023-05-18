@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "header header header header header"
+        "main main main main main"
+        "main main main main main"
+        "main main main main main"
+        "section section section aside aside"
+        "section section section aside aside"
+        "footer footer footer footer footer"
+    ;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-area: header;
+    padding: 10px 30px;
+    background-color: rgb(50, 152, 219);
+
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 10px;
+
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(92, 89, 89);
+    height: 800px;
+}
+
+main .servicios-destacados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.articulos {
+    grid-area: section;
+    background-color: rgb(255, 196, 196);
+}
+
+.articulos article {
+    margin: 10px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 10px 30px;
+    background-color: rgb(221, 194, 247);
+}
+
+.card {
+    background-color: antiquewhite;
+    margin: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.card div h2,
+.card div p {
+    text-align: center;
+}
+.card .foto, .card .boton{
+    display: flex;
+    justify-content: center;
+}
