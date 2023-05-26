@@ -17,7 +17,6 @@
     --color-fondo: #1f2125;
     --color-section: rgb(38, 37, 46);
     --color-parrafo: white;
-
     --font: 'Roboto', sans-serif;
     --size-encabezado: 50px;
     --size-parrafos: 22px;
@@ -42,7 +41,7 @@ main {
 }
 
 /*FLEX*/
-:is(header, nav ul, .buscador, #servicios, #nosotros, #contacto, .nosotros-info, .datos) {
+:is(header, nav ul, .buscador, #servicios, #nosotros, #contacto, .datos) {
     display: flex;
 }
 
@@ -80,6 +79,13 @@ header nav ul li a {
 header nav ul li a:hover {
     color: rgb(255, 208, 0);
     transition: 0.2s;
+}
+
+header nav ul li a:focus{
+    color: green;
+}
+header nav ul li a:active {
+    color: red;
 }
 
 
@@ -155,9 +161,12 @@ main .buscar {
 
 section #servicios {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     justify-content: center;
-    grid-template-columns: repeat(4, 340px);
     place-items: center;
+    grid-auto-rows: 340px;
+    grid-gap:20px;
+    grid-auto-flow: dense;
 }
 
 section #titu {
@@ -187,18 +196,18 @@ h5 {
     margin-top: 15px;
 }
 
-section .card {
+section .card-servicios {
     position: relative;
-    display: inline-block;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1);
     border-radius: 7px;
     background-color: rgb(38, 37, 46);
     padding: 5px;
     margin: 7px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
-section .card:hover {
+section .card-servicios:hover {
     box-shadow: 0px 0px 10px 1px rgba(158, 138, 83, 0.61);
     background-color: rgb(214, 214, 214);
     transform: scale(1.03);
@@ -213,12 +222,15 @@ section .card-evento {
     padding: 5px;
     margin: 7px;
     transition: 0.5s;
+    cursor: pointer;
 }
+
 section .card-evento:hover {
     box-shadow: 0px 0px 10px 1px rgba(158, 138, 83, 0.61);
     transform: scale(1.03);
 }
-.boton-comprar{
+
+.boton-comprar {
     margin-left: 200px;
     margin-top: 10px;
 }
@@ -254,6 +266,7 @@ section .texto-eventos {
     font-size: 18px;
     padding-left: 10px;
 }
+
 section .card-evento {
     width: auto;
     height: 350px;
@@ -316,6 +329,7 @@ footer a {
 }
 
 .nosotros-info {
+    display: flex;
     justify-content: space-around;
     padding-top: 7%;
     flex-wrap: wrap;
@@ -395,32 +409,39 @@ input {
 
 
 /*//////////////////////MEDIA QUERIES//////////////////////////*/
-@media (max-width:500px) {
+@media (max-width:530px) {
 
 
     header {
         position: fixed;
         bottom: 0;
         z-index: 3;
-        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.856) 25%, #080808b9 50%);
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.856) 75%, #080808b9 90%);
         width: 100%;
-        padding: 16px 15px;
+        padding: 14px 0px;
     }
 
-    header nav ul li a {
-        margin-left: 2px;
-        font-size: 12px;
+
+
+
+    header nav ul li a,
+    header nav ul li #logo {
+        margin: 5px;
+        font-size: 13px;
+        font-weight: bold;
     }
-    main #banner{
+
+    main #banner {
         text-align: center;
         font-size: 12px;
         width: 80%;
     }
-    main #banner p{
+
+    main #banner p {
         font-size: 16px;
         width: 100%;
     }
-    
+
     main .tituindex {
         font-size: 25px;
         padding-top: 90px;
@@ -428,26 +449,30 @@ input {
     }
 
     main .buscar {
-        width: 90%;
+        width: 100%;
     }
+
     section #servicios {
         display: grid;
-        grid-template-columns: repeat(1, 100px);
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        justify-content: center;
+        place-items: center;
+        grid-auto-rows: 100px;
+        grid-gap: 20px;
+        grid-auto-flow: dense;
 
     }
-    #titu{
+
+    #titu {
         font-size: 20px;
     }
-    
 
-    section .card {
+    section .card-servicios {
         width: 330px;
     }
-    section .card:hover {
-        position: relative;
-        display: inline-block;
+
+    section .card-servicios:hover {
         box-shadow: 0px 0px 5px 1px rgba(143, 143, 143, 0.61);
-        border-radius: 7px;
         background-color: rgba(49, 48, 48, 0);
     }
 
@@ -456,6 +481,7 @@ input {
         display: flex;
         height: 92px;
     }
+
     section .texto-eventos {
         color: white;
         font-size: 13px;
@@ -487,10 +513,12 @@ input {
         padding-left: 100px;
         padding-bottom: 10px;
     }
-    .boton-comprar{
+
+    .boton-comprar {
         margin-left: 150px;
         margin-top: 30px;
     }
+
     .bannerevent {
         object-fit: cover;
         box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.69);
@@ -503,52 +531,87 @@ input {
     }
 
     /* /////////////////////////////////NOSOTROS.HTML y algo de contacto/////////////////////////////////////////////////////// */
-:is(#nosotros, #contacto) {
-    padding-top: 3%;
-    text-align: center;
-    justify-content: center;
-    color: white;
+    :is(#nosotros, #contacto) {
+        padding-top: 3%;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+
+    #nosotros h2 {
+        padding-top: 10%;
+        font-size: 16px;
+    }
+
+    .nosotros-container {
+        background-color: rgb(38, 37, 46);
+        box-shadow: 0px 0px 5px 0px rgba(19, 23, 34, 0.75);
+        border-radius: 20px;
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .nosotros-info {
+        padding-top: 5%;
+        display: grid;
+    }
+
+    #nosotros img {
+        border-radius: 50%;
+    }
+
+
+    /* ///////////////////////////////////CONTACTO.HTML //////////////////////////////////////////////////// */
+
+    .contacto-container {
+        background-color: var(--color-section);
+        box-shadow: 0px 0px 5px 0px rgba(19, 23, 34, 0.75);
+        /*COLOR CONTAINER*/
+        border-radius: 20px;
+        width: 90%;
+    }
+
+    :is(#nosotros p, #contacto p) {
+        padding-top: 7%;
+        padding-bottom: 10%;
+    }
+
+    .contacto-info {
+        text-align: left;
+        width: auto;
+        height: 556px;
+    }
+
+    #contacto fieldset {
+        border-radius: 10px;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 5%;
+        border-color: #6d6d6d;
+    }
 }
 
-#nosotros h2 {
-    padding-top: 10%;
-    font-size: 16px;
-}
-
-.nosotros-container {
-    background-color: rgb(38, 37, 46);
-    box-shadow: 0px 0px 5px 0px rgba(19, 23, 34, 0.75);
-    border-radius: 20px;
-    width: 90%;
-    padding: 2%;
-}
-
-.nosotros-info {
-    padding-top: 7%;
-    display: grid;
-    grid-template-columns: repeat(3, 4px);
-}
+@media (min-width:531px) and (max-width:1023px) {
+    header {
+        position: fixed;
+        bottom: 0;
+        z-index: 3;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.856) 75%, #080808b9 90%);
+        width: 100%;
+        padding: 24px 0px;
+    }
 
 
-#nosotros img {
-    border-radius: 50%;
-}
-
-:is(#nosotros p, #contacto p) {
-    margin-left: 2%;
-    margin-right: 2%;
-    padding-top: 2%;
-}
 
 
-/* ///////////////////////////////////CONTACTO.HTML //////////////////////////////////////////////////// */
-
-.contacto-container {
-    background-color: var(--color-section);
-    box-shadow: 0px 0px 5px 0px rgba(19, 23, 34, 0.75);
-    /*COLOR CONTAINER*/
-    border-radius: 20px;
-    width: 90%;
-
-}
+    header nav ul li a,
+    header nav ul li #logo {
+        font-size: 13px;
+        font-weight: bold;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 }
