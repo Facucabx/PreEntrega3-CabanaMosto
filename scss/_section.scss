@@ -1,0 +1,85 @@
+section {
+    .nosotros-container {
+        background-color: rgb(38, 37, 46);
+        box-shadow: 0px 0px 5px 0px rgba(19, 23, 34, 0.75);
+        border-radius: 20px;
+        width: 70%;
+        padding: 2%;
+        .nosotros-info {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 7%;
+            flex-wrap: wrap;
+    
+            img {
+                border-radius: 50%;
+            }
+    
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+   
+    .contacto-container {
+        /* ///////////////////////////////////CONTACTO.HTML //////////////////////////////////////////////////// */
+        background-color: var(--color-section);
+        box-shadow: 0px 0px 5px 0px rgba(19, 23, 34, 0.75);
+        /*COLOR CONTAINER*/
+        border-radius: 20px;
+        width: 60%;
+        padding: 2%;
+
+        .contacto-info {
+            text-align: left;
+            width: 100%;
+            height: 500px;
+
+            fieldset {
+                border-radius: 10px;
+                margin-top: 2%;
+                margin-left: 5%;
+                margin-right: 5%;
+                padding: 3%;
+                border-color: #6d6d6d;
+            }
+
+            .datos {
+                flex-direction: column;
+
+                textarea,
+                input {
+                    display: flex;
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    border-radius: 7px;
+                    background-color: rgba(255, 255, 255, 0.514);
+                    border-style: none;
+                }
+
+                button {
+                    width: 100px;
+                    height: 30px;
+                    font-size: var(--font);
+                    background-color: #cc7401;
+                    align-items: center;
+                    border-radius: 7px;
+                    color: var(--color-parrafo);
+                }
+
+                .datos-boton {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+        }
+    }
+}

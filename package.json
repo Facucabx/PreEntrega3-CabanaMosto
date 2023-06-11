@@ -1,0 +1,12 @@
+{
+  "name": "coder",
+  "version": "1.0.0",
+  "description": "Esta es la 2da pre entrega para Coderhouse.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,41 @@
+header {
+    /* NAVBAR */
+    position: fixed;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(6, 6, 6, 0) 0%, rgba(0, 0, 0, 0.8) 25%, #000000 50%);
+    width: 100%;
+    padding: 10px 30px;
+
+    nav {
+        ul {
+            flex-direction: row;
+            align-items: center;
+
+            a {
+                margin-left: 70px;
+                font-size: 15px;
+                transition: 0.5s;
+                color: white;
+
+                &:hover {
+                    color: rgb(255, 208, 0);
+                    transition: 0.2s;
+                }
+
+                &:focus {
+                    color: rgb(128, 98, 0);
+                }
+            }
+
+            #logo {
+                color: rgb(241, 109, 57);
+                font-size: 20px;
+            }
+        }
+    }
+
+    .navbar-selected {
+        color: rgb(238, 167, 13);
+        transition: 0.2s;
+    }
+}
