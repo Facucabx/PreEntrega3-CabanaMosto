@@ -5,7 +5,7 @@ header {
   z-index: 2;
   background: linear-gradient(0deg, rgba(6, 6, 6, 0) 0%, rgba(0, 0, 0, 0.8) 25%, #000000 50%);
   width: 100%;
-  padding: 10px 30px;
+  padding: 25px 30px;
 }
 header nav ul {
   flex-direction: row;
@@ -111,8 +111,8 @@ main :is(.servicios-contenedor, .eventos-contenedor) {
   border-radius: 7px;
   box-shadow: 0px 0px 5px 0px rgba(57, 63, 82, 0.75);
   margin: 0 auto;
-  padding: 20px;
-  margin-top: 15px;
+  padding: 33px 20px;
+  margin-top: 25px;
 }
 main :is(.servicios-contenedor, .eventos-contenedor) #servicios {
   display: grid;
@@ -499,15 +499,6 @@ main section .contacto-container .contacto-info .datos .datos-boton {
     justify-content: center;
   }
 }
-* {
-  /* /////////////////////////////INDEX.HTML//////////////////////////////////////// */
-  margin: 0;
-  box-sizing: border-box;
-  font-family: var(--font);
-  text-decoration: none;
-  list-style-type: none;
-}
-
 :root {
   /* ESTILOS PRINCIPALES */
   --color-fondo: #1f2125;
@@ -516,6 +507,15 @@ main section .contacto-container .contacto-info .datos .datos-boton {
   --font: "Roboto", sans-serif;
   --size-encabezado: 50px;
   --size-parrafos: 18px;
+}
+
+* {
+  /* /////////////////////////////INDEX.HTML//////////////////////////////////////// */
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  text-decoration: none;
+  list-style-type: none;
 }
 
 html {
@@ -536,7 +536,7 @@ footer {
   background-color: black;
   color: #838383;
   font-size: 11px;
-  padding: 6px;
+  padding: 23px;
 }
 footer a {
   color: rgb(36, 185, 253);
