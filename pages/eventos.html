@@ -42,7 +42,7 @@
             <div>
                 <!-- BUSCADOR -->
                 <div class="buscador">
-                    <input class="buscar" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <input class="buscar" type="search" placeholder="Buscar" aria-label="Buscar" oninput="buscarEvento()">
                 </div>
                 <!-- BANNER -->
                 <img class="bannerevent" src="../img/eventbanner.jpg" alt="Imagen del evento de la Bresh">
@@ -102,6 +102,9 @@
                     <div>
                         <button class="boton-comprar">Comprar</button>
                     </div>
+                </div>
+                <div id="sin-resultados" style="display: none;">
+                    <p>No se encontraron eventos que coincidan con la búsqueda.</p>
                 </div>
         </section>
 
@@ -213,6 +216,9 @@
                         <button class="boton-comprar">Comprar</button>
                     </div>
                 </div>
+                <div id="sin-resultados" style="display: none;">
+                    <p>No se encontraron eventos que coincidan con la búsqueda.</p>
+                </div>
         </section>
     </main>
 
@@ -222,5 +228,7 @@
     <footer>
         <h3>Realizado por <a href="https://facu.tech"> facu.tech </a>(2023)</h3>
     </footer>
+<!-- javascript -->
+<script src="/js/main.js"></script>
 
 </html>
