@@ -54,7 +54,7 @@ main .buscar {
 main .buscador {
   /* BUSCADOR */
   text-align: center;
-  padding-top: 50px;
+  padding-top: 70px;
   flex-wrap: wrap;
   justify-content: center;
 }

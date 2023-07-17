@@ -11,12 +11,13 @@
     <meta name="author" content="Facundo Ezequiel Cabaña Mosto">
     <!-- DESCRIPCION y SEO-->
     <meta name="description"
-        content="Apligood es un proyecto para la Carrera de Desarrollo Full Stack de Coderhouse. Nuestro sitio web te permite encontrar fácilmente servicios y eventos en diferentes partes del mundo. Explora una amplia gama de profesionales expertos y emocionantes eventos en tu ciudad. Encuentra lo que necesitas hoy mismo y disfruta de los mejores precios y la simplicidad en la búsqueda.">
+    content="Apligood es un proyecto para la Carrera de Desarrollo Full Stack de Coderhouse. Nuestro sitio web te permite encontrar fácilmente servicios y eventos en diferentes partes del mundo. Explora una amplia gama de profesionales expertos y emocionantes eventos en tu ciudad. Encuentra lo que necesitas hoy mismo y disfruta de los mejores precios y la simplicidad en la búsqueda.">
     <meta name="keywords" content="SERVICIOS, EVENTOS, CIUDAD, PROFESIONALES, PROYECTO, CODERHOUSE, EXPERTOS, BUSCAR">
     <!-- TITULO -->
     <title>Apligood - Servicios y eventos - Proyecto para CoderHouse | Desarrollo Full Stack</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="Icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
             </div>
             <!-- BUSCADOR -->
             <div class="buscador">
-                <input class="buscar" type="search" placeholder="Buscar" aria-label="Buscar">
+                <input class="buscar" type="search" placeholder="Buscar" aria-label="Buscar" oninput="buscarServicio()">
             </div>
             <!-- VIDEO -->
             <video muted autoplay loop>
@@ -147,5 +148,6 @@
 <footer>
     <h3>Realizado por <a href="https://facu.tech"> facu.tech </a>(2023)</h3>
 </footer>
+<script src="js/main.js"></script>
 
 </html>
