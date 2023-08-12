@@ -2,7 +2,7 @@
 header {
   /* NAVBAR */
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   background: linear-gradient(0deg, rgba(6, 6, 6, 0) 0%, rgba(0, 0, 0, 0.8) 25%, #000000 50%);
   width: 100%;
   padding: 25px 30px;
@@ -12,7 +12,7 @@ header nav ul {
   align-items: center;
 }
 header nav ul a {
-  margin-left: 70px;
+  margin-left: 30px;
   font-size: 15px;
   transition: 0.5s;
   color: white;
@@ -28,6 +28,20 @@ header nav ul #logo {
   color: rgb(241, 109, 57);
   font-size: 20px;
 }
+header nav ul .buscar {
+  width: 20rem;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 14px;
+  z-index: 1;
+  outline: none;
+}
+header nav ul .buscador {
+  /* BUSCADOR */
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 header .navbar-selected {
   color: rgb(238, 167, 13);
   transition: 0.2s;
@@ -40,23 +54,6 @@ main {
   background: linear-gradient(71deg, #080509, #1a171c, #080509);
   min-height: 100%;
   padding-bottom: 1%;
-}
-main .buscar {
-  width: 40%;
-  height: 30px;
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
-  background-color: rgb(248, 245, 245);
-  z-index: 1;
-}
-main .buscador {
-  /* BUSCADOR */
-  text-align: center;
-  padding-top: 70px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 main #banner {
   /* CONTENEDOR BANNER */
@@ -96,10 +93,11 @@ main #banner .buscador {
 }
 main #banner .buscar {
   width: 40%;
-  height: 30px;
+  padding-left: 20px;
+  height: 3rem;
   padding: 10px;
-  font-size: 14px;
-  border-radius: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
   background-color: rgb(248, 245, 245);
 }
@@ -116,7 +114,7 @@ main :is(.servicios-contenedor, .eventos-contenedor) {
 }
 main :is(.servicios-contenedor, .eventos-contenedor) #servicios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   place-items: center;
   grid-auto-rows: 340px;

@@ -1,7 +1,7 @@
 header {
     /* NAVBAR */
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     background: linear-gradient(0deg, rgba(6, 6, 6, 0) 0%, rgba(0, 0, 0, 0.8) 25%, #000000 50%);
     width: 100%;
     padding: 25px 30px;
@@ -12,7 +12,7 @@ header {
             align-items: center;
 
             a {
-                margin-left: 70px;
+                margin-left: 30px;
                 font-size: 15px;
                 transition: 0.5s;
                 color: white;
@@ -30,6 +30,21 @@ header {
             #logo {
                 color: rgb(241, 109, 57);
                 font-size: 20px;
+            }
+            .buscar {
+                width: 20rem;
+                height: 30px;
+                margin-left: 10px;
+                font-size: 14px;
+                z-index: 1;
+                outline: none;
+            }
+        
+            .buscador {
+                /* BUSCADOR */
+                text-align: center;
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     }

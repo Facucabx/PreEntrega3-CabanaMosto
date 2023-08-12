@@ -6,25 +6,6 @@ main {
     min-height: 100%;
     padding-bottom: 1%;
 
-    .buscar {
-        width: 40%;
-        height: 30px;
-        padding: 10px;
-        font-size: 14px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1);
-        background-color: rgb(248, 245, 245);
-        z-index: 1;
-    }
-
-    .buscador {
-        /* BUSCADOR */
-        text-align: center;
-        padding-top: 70px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     #banner {
         /* CONTENEDOR BANNER */
         margin: 0 auto;
@@ -68,10 +49,11 @@ main {
 
         .buscar {
             width: 40%;
-            height: 30px;
+            padding-left: 20px;
+            height: 3rem;
             padding: 10px;
-            font-size: 14px;
-            border-radius: 10px;
+            font-size: 1.5rem;
+            border-radius: 5px;
             box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1);
             background-color: rgb(248, 245, 245);
         }
@@ -90,7 +72,7 @@ main {
 
         #servicios {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             justify-content: center;
             place-items: center;
             grid-auto-rows: 340px;
